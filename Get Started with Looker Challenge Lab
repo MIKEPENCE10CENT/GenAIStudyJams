@@ -30,6 +30,7 @@ view: users_region {
 
 
 Replace the follwing in training_ecommerce.model file:
+
 connection: "bigquery_public_data_looker"
 
 # include all the views
@@ -99,6 +100,6 @@ explore: events {
 
 
 
-Create a bar chart of the top 3 event types based on the highest number of users
+Create a bar chart of the : top 3 event types based on the highest number of users
 
-Save your bar chart to a new dashboard named User Events
+Save your bar chart to a new dashboard named : User Events
