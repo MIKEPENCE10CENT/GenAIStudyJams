@@ -1,0 +1,24 @@
+
+
+Task 1. Enable the Google App Engine Admin API
+
+For Task 1 Go To Search Bar And Type "App Engine Admin Api" In Search Box And Click App Engine Admin Api > Click Enable
+
+
+Task 2. Download the Hello World app
+
+git clone https://github.com/GoogleCloudPlatform/php-docs-samples.git
+
+cd php-docs-samples/appengine/standard/helloworld
+
+Task 3. Deploy your application
+
+gcloud app deploy
+
+gcloud app browse
+
+Task 4. Deploy updates to your application
+
+nano index.php
+
+gcloud app deploy
