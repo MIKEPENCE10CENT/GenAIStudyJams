@@ -24,6 +24,12 @@ gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID \
   --member serviceAccount:$SERVICE_ACCOUNT \
   --role roles/pubsub.publisher
 
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 Task 2. Create, deploy, and test a Cloud Storage function (2nd gen)
 
 mkdir ~/$FUNCTION_NAME && cd $_
@@ -38,6 +44,13 @@ gcloud functions deploy $FUNCTION_NAME \
   --trigger-bucket $BUCKET \
   --trigger-location $REGION \
   --max-instances 2
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 Task 3. Create and deploy a HTTP function (2nd gen) with minimum instances
 
 cd ..
