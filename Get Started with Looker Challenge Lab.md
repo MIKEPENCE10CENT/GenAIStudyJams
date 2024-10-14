@@ -1,36 +1,37 @@
-Create a new view named users_region and Paste the following:
+### 1. Create a New View `users_region`
+Create a new view named `users_region` in your Looker project and paste the following code:
 
+```lkml
 view: users_region {
   sql_table_name: cloud-training-demos.looker_ecomm.users ;;
-  
+
   dimension: id {
     type: number
     sql: ${TABLE}.id ;;
     primary_key: yes
   }
-  
+
   dimension: state {
     type: string
     sql: ${TABLE}.state ;;
   }
-  
+
   dimension: country {
     type: string
     sql: ${TABLE}.country ;;
   }
-  
+
   measure: count {
     type: count
     drill_fields: [id, state, country]
   }
 }
+```
 
+### 2. Modify `training_ecommerce.model` File
+In the `training_ecommerce.model` file, replace the existing content with the following:
 
-
-
-
-Replace the follwing in training_ecommerce.model file:
-
+```lkml
 connection: "bigquery_public_data_looker"
 
 # include all the views
@@ -79,27 +80,46 @@ explore: events {
     sql_on: ${events.session_id} = ${event_session_facts.session_id} ;;
     relationship: many_to_one
   }
+  
   join: event_session_funnel {
     type: left_outer
     sql_on: ${events.session_id} = ${event_session_funnel.session_id} ;;
     relationship: many_to_one
   }
+  
   join: users {
     type: left_outer
     sql_on: ${events.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
+
   join: users_region {
     type: left_outer
-    sql_on: ${events.user_id} = ${users_region.id};;
+    sql_on: ${events.user_id} = ${users_region.id} ;;
     relationship: many_to_one
   }
 }
+```
 
+### 3. Create the Bar Chart
+To create the bar chart in Looker:
 
+1. **Go to the `events` explore**:
+   - Select the `events` explore where the data for event types and users exists.
+   
+2. **Configure the chart**:
+   - Select a dimension for `event type`.
+   - Select a measure for `count of users` (from the `users` or `users_region` view).
+   
+3. **Sort and Limit**:
+   - Sort the chart by the count of users in descending order.
+   - Set a filter to show only the **Top 3 event types**.
 
+4. **Create a Bar Chart**:
+   - Change the visualization type to a **Bar Chart**.
 
+5. **Save the Chart**:
+   - Save the chart to a new dashboard by clicking **Save to Dashboard**.
+   - Name the dashboard **User Events**.
 
-Create a bar chart of the : top 3 event types based on the highest number of users
-
-Save your bar chart to a new dashboard named : User Events
+Let me know if you need any further assistance!
