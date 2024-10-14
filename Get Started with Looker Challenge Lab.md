@@ -121,5 +121,3 @@ To create the bar chart in Looker:
 5. **Save the Chart**:
    - Save the chart to a new dashboard by clicking **Save to Dashboard**.
    - Name the dashboard **User Events**.
-
-Let me know if you need any further assistance!
