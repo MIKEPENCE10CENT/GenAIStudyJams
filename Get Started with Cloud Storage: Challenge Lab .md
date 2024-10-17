@@ -19,3 +19,15 @@ gsutil cp ada.jpg gs://$BUCKET
 gsutil acl ch -u AllUsers:R gs://$BUCKET/ada.jpg
 
 
+# Cloud Functions: 3 Ways: Challenge Lab
+
+## Task 1: Create a Cloud Storage Bucket
+
+Create a Cloud Storage bucket in `GIVEN_REGION` using your Project ID as the bucket name.
+
+```bash
+export HTTP_FUNCTION=
+export FUNCTION_NAME=
+export REGION=
+export BUCKET=gs://[PROJECT_ID]
+```
