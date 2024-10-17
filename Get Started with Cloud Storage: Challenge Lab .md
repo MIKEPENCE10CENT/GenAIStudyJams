@@ -1,33 +1,20 @@
-#Task 1. Create a bucket
-
+# Task 1. Create a bucket
+```bash
 export BUCKET=$(gcloud config get-value project)
 
 gsutil mb "gs://$BUCKET"
-
-#Task 2. Create a retention policy
-
+```
+# Task 2. Create a retention policy
+```bash
 gsutil retention set 30s "gs://$BUCKET"
 
 gsutil retention get "gs://$BUCKET"
-
-#Task 3. Add a file to the bucket
-
+```
+# Task 3. Add a file to the bucket
+```bash
 curl https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/800px-Ada_Lovelace_portrait.jpg --output ada.jpg
 
 gsutil cp ada.jpg gs://$BUCKET
 
 gsutil acl ch -u AllUsers:R gs://$BUCKET/ada.jpg
-
-
-# Cloud Functions: 3 Ways: Challenge Lab
-
-## Task 1: Create a Cloud Storage Bucket
-
-Create a Cloud Storage bucket in `GIVEN_REGION` using your Project ID as the bucket name.
-
-```bash
-export HTTP_FUNCTION=
-export FUNCTION_NAME=
-export REGION=
-export BUCKET=gs://[PROJECT_ID]
 ```
