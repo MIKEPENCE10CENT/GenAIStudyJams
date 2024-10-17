@@ -1,20 +1,14 @@
-# Task 1. Create a bucket
+# Export Buckets
 ```bash
-export BUCKET=$(gcloud config get-value project)
-
-gsutil mb "gs://$BUCKET"
+export BUCKET_1=
+export BUCKET_2=
+export BUCKET_3=
 ```
-# Task 2. Create a retention policy
+# Run these commands 
 ```bash
-gsutil retention set 30s "gs://$BUCKET"
+curl -LO raw.githubusercontent.com/gcpsolution99/GCP-solution/main/Get%20Started%20with%20Cloud%20Storage%3A%20Challenge%20Lab/ARC111.sh
 
-gsutil retention get "gs://$BUCKET"
-```
-# Task 3. Add a file to the bucket
-```bash
-curl https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/800px-Ada_Lovelace_portrait.jpg --output ada.jpg
+sudo chmod +x ARC111.sh
 
-gsutil cp ada.jpg gs://$BUCKET
-
-gsutil acl ch -u AllUsers:R gs://$BUCKET/ada.jpg
+./ARC111.sh
 ```
