@@ -2,7 +2,7 @@
 # Solution here
 
 
-Download Jupyter file from 
+Download Jupyter file from https://github.com/MIKEPENCE10CENT/GenAIStudyJams/blob/main/prompt.ipynb
 
 
 
