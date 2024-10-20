@@ -2,7 +2,8 @@
 # Solution here
 
 
-Download Jupyter file from [Uploading prompt.ipynb…]()
+Download Jupyter file from 
+
 
 
 # Run the following Commands in CloudShell
