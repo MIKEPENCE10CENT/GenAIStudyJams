@@ -1,8 +1,9 @@
 ## Develop GenAI Apps with Gemini and Streamlit: Challenge Lab 
 # Solution here
-Go to USER-MANAGE NOTEBOOKS from here
 
-Download Jupyter file from here
+
+Download Jupyter file from [Uploading prompt.ipynb…]()
+
 
 # Run the following Commands in CloudShell
 # Assign Veriable
